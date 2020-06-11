@@ -1,0 +1,14 @@
+{
+  "DEV": {
+    "API_URL": "http://localhost:3000",
+    "ETHERSCAN_URL": "https://rinkeby.etherscan.io"
+  },
+  "PRODUCTION": {
+    "API_URL": "https://api.intimate.io",
+    "ETHERSCAN_URL": "https://etherscan.io"
+  },
+  "STAGING": {
+    "API_URL": "https://dev-api.intimate.partners",
+    "ETHERSCAN_URL": "https://rinkeby.etherscan.io"
+  }
+}

@@ -1,0 +1,56 @@
+/*
+ *
+ * Account constants
+ *
+ */
+
+export const DEFAULT_ACTION = 'app/Account/DEFAULT_ACTION';
+
+export const CHANGE_COMPANY_NAME = 'app/Account/CHANGE_COMPANY_NAME';
+export const CHANGE_COMPANY_SCREEN_NAME =
+  'app/Account/CHANGE_COMPANY_SCREEN_NAME';
+export const CHANGE_EMAIL = 'app/Account/CHANGE_EMAIL';
+export const CHANGE_COMPANY_WEBSITE = 'app/Account/CHANGE_COMPANY_WEBSITE';
+export const CHANGE_COMPANY_DESCRIPTION =
+  'app/Account/CHANGE_COMPANY_DESCRIPTION';
+export const CHANGE_COMPANY_LOGO = 'app/Account/CHANGE_COMPANY_LOGO';
+export const CHANGE_ACCOUNT_EMAIL = 'app/Account/CHANGE_ACCOUNT_EMAIL';
+export const CHANGE_CATEGORIES = 'app/Account/CHANGE_CATEGORIES';
+export const CATEGORY_TO_CHECK = 'app/Account/CATEGORY_TO_CHECK';
+export const CATEGORY_TO_UNCHECK = 'app/Account/CATEGORY_TO_UNCHECK';
+export const CHANGE_PLUGINS = 'app/Account/CHANGE_PLUGINS';
+export const PLUGINS_TO_CHECK = 'app/Account/PLUGINS_TO_CHECK';
+export const PLUGINS_TO_UNCHECK = 'app/Account/PLUGINS_TO_UNCHECK';
+export const CHANGE_TARGET_AUDIENCE = 'app/Account/CHANGE_TARGET_AUDIENCE';
+export const TARGET_AUDIENCE_TO_CHECK =
+  'app/Account/TARGET_TO_AUDIENCE_TO_CHECK';
+export const TARGET_AUDIENCE_TO_UNCHECK =
+  'app/Account/TARGET_TO_AUDIENCE_TO_UNCHECK';
+
+export const CHANGE_CURRENCIES_AVAILABLE =
+  'app/Account/CHANGE_CURRENCIES_AVAILABLE';
+export const CURRENCIES_TO_CHECK = 'app/Account/CURRENCIES_TO_CHECK';
+export const CURRENCIES_TO_UNCHECK = 'app/Account/CURRENCIES_TO_UNCHECK';
+
+export const CHANGE_LOCAL_TIMEZONE = 'app/Account/CHANGE_LOCAL_TIMEZONE';
+export const CHANGE_LOCAL_CURRENCY = 'app/Account/CHANGE_LOCAL_CURRENCY';
+export const CHANGE_PRIMARY_COUNTRY = 'app/Account/CHANGE_PRIMARY_COUNTRY';
+
+export const EDIT_COMPANY_ACCOUNT = 'app/Account/EDIT_COMPANY_ACCOUNT';
+export const EDIT_COMPANY_ACCOUNT_SUCCESS =
+  'app/Account/EDIT_COMPANY_ACCOUNT_SUCCESS';
+export const EDIT_COMPANY_ACCOUNT_FAILED =
+  'app/Account/EDIT_COMPANY_ACCOUNT_FAILED';
+
+export const OPEN_MODAL = 'app/Account/OPEN_MODAL';
+export const CLOSE_MODAL = 'app/Account/CLOSE_MODAL';
+
+export const OPEN_LOGO_MODAL = 'app/Account/OPEN_LOGO_MODAL';
+export const CLOSE_LOGO_MODAL = 'app/Account/CLOSE_LOGO_MODAL';
+
+export const LOAD_COMPANY_DETAILS = 'app/Account/LOAD_COMPANY_DETAILS';
+export const LOAD_COMPANY_DETAILS_SUCCESS =
+  'app/Account/LOAD_COMPANY_DETAILS_SUCCESS';
+
+export const RESET_PASSWORD = 'app/Account/RESET_PASSWORD';
+export const RESET_PASSWORD_SUCCESS = 'app/Account/RESET_PASSWORD_SUCCESS';

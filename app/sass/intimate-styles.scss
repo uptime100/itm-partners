@@ -1,0 +1,870 @@
+@charset "utf-8";
+
+//Global Variables
+$primary: #62B5E5;
+$danger: #DE3333;
+$warning: #F2B82F;
+$info: #385E9D;
+$input-color: #62B5E5;
+$input-border-color: #62B5E5;
+$family-primary: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$table-row-hover-background-color: rgba($color: $primary, $alpha: 0.3);
+$black: #000;
+
+
+//@import "node_modules/dist/css/bulma-checkradio.sass";
+@import "node_modules/bulma/bulma.sass";
+
+@font-face {
+    font-family: "SF Pro";
+    src: url('../SF-Pro/SF-Pro-Text-Regular.otf');
+  }
+
+
+//Form Fields
+.input{
+    border-radius: 2px;
+    font-family: 'SF Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+}
+
+.input.is-danger {
+    color: $danger;
+}
+
+.input.is-warning {
+    color: $warning;
+}
+
+.input.is-info {
+    color: $info;
+}
+
+.input.is-primary {
+    color: $primary;
+}
+
+//Buttons
+.buttons.has-addons .button {
+    color: $primary;
+    border-color: $primary;
+    &.is-selected{
+        color:white;
+    }
+}
+
+.button{
+    border-radius: 2px;
+}
+
+.button.is-primary.is-outlined {
+    color: $primary;
+    background-color: white;
+}
+
+button.button.is-primary:hover,
+button.button.is-primary:active,
+button.button.is-primary:focus{
+    background-color: $info;
+    border-color: $info;
+}
+
+.button.is-primary.is-outlined:hover,
+.button.is-primary.is-outlined:active,
+.button.is-primary.is-outlined:focus{
+    background-color: white;
+    border-color: $info;
+    color: $info;
+}
+
+.button.is-primary[disabled] :hover,
+.button.is-primary[disabled]:active,
+.button.is-primary[disabled]:focus,
+.button.is-primary[disabled]
+{
+    background-color: $primary;
+    border-color: transparent;
+    box-shadow: none;
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%);
+}
+
+.button.is-primary.is-outlined[disabled] :hover,
+.button.is-primary.is-outlined[disabled]:active,
+.button.is-primary.is-outlined[disabled]:focus,
+.button.is-primary.is-outlined[disabled]
+{
+    background-color: white;
+    border-color: grey;
+    color: grey;
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%);
+}
+
+//Headings and Body
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6
+    {
+        color: rgba($color: $primary, $alpha: 0.8);
+    }
+    p
+    {
+        font-family: 'SF Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+     }
+
+
+
+//Dropdown
+.dropdown .dropdown-trigger button {
+    border: 1px solid $primary;
+    color: $primary;
+    font-family: 'SF Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+}
+
+.dropdown .dropdown-menu  button{
+    color: $primary;
+    font-family: 'SF Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    &:hover{
+        background-color: $primary;
+        color: white;
+    }
+}
+
+.dropdown-item{
+    color: $primary;
+}
+
+a.dropdown-item:hover{
+    &:hover{
+        color:white;
+        background-color: $primary
+    }
+}
+
+.dropDownSelect  div{
+    font-family: 'SF Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    border-color: $primary;
+    border-radius: 0.5px;
+    z-index:40;
+    &:hover{
+        border-color: $primary;
+    }
+    div span{
+        width:0;
+    }
+}
+
+.dropDownSelect div div div svg{
+    color: white;
+}
+
+
+.dropDownSelect > div > div:nth-last-child(1){
+    background-color: $primary;
+    border-radius:0px;
+}
+
+.dropdownAlternative > div > div:nth-last-child(1){
+    background-color: $white;
+}
+
+.dropDownSelect > div > div:first-child {
+    background-color: $white;
+    font-size: 100%;
+}
+
+.dropdownAlternative div div div svg{
+    color: $primary;
+}
+
+.dropdownAlternative > div > div:nth-last-child(1){
+    background-color: $white;
+}
+
+.dropdownAlternative > div > div:nth-last-child(1){
+    background-color: $white;
+}
+
+//Date Picker
+.react-datepicker-popper > .react-datepicker{
+    border: 1px solid $primary;
+}
+
+.react-datepicker-wrapper .react-datepicker__input-container input{
+    color:$primary;
+    border: 1px solid $primary;
+    background: white url("https://img.icons8.com/ultraviolet/40/000000/calendar.png") no-repeat;
+    background-size:10%;
+    background-position: right 4px center;
+    padding-left: 5px;
+    height:35px;
+}
+
+.react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle, .react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle::before {
+    border-top: none;
+    border-bottom-color:$primary;
+}
+
+.react-datepicker-popper[data-placement^="top"] .react-datepicker__triangle::before, .react-datepicker__year-read-view--down-arrow::before, .react-datepicker__month-read-view--down-arrow::before, .react-datepicker__month-year-read-view--down-arrow::before {
+    bottom: -1px;
+    border-top-color: $primary;
+}
+
+.react-datepicker-popper > .react-datepicker > .react-datepicker__month-container{
+    font-family: $family-primary;
+    .react-datepicker__header{
+        background-color: $primary;
+        border-bottom-width: 0px;
+        .react-datepicker__current-month{
+            color: white;
+            font-family: $family-primary;
+            text-transform: uppercase;
+            padding-bottom:5px
+        }
+        .react-datepicker__day-names{
+            background-color: white;
+            .react-datepicker__day-name{
+                color: $primary;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.react-datepicker-popper > .react-datepicker > .react-datepicker__navigation--next{
+    border-left-color:white;
+}
+
+.react-datepicker-popper > .react-datepicker > .react-datepicker__navigation--previous{
+    border-right-color:white;
+}
+
+.dropDownSelect{
+    z-index: 40;
+} 
+
+
+//React Datez
+
+.rdatez{
+    border: 1px solid $primary;
+    width: 100%;
+    .rdatez-day{
+        border: none;
+        &:nth-last-child(-n+8){
+            border: none;       
+        }
+        &:hover {
+            background: #b3d4fc;
+        }
+    }
+
+    .rdatez-year, .rdatez-month{
+        width: 23%;
+        height: 66px;
+        background-color: rgba($color: $primary, $alpha: 0.2);
+        color: $black;
+        margin: 2px 2px;
+        font-family: 'SF Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+        text-transform: uppercase;
+        &:hover{
+        color: #fff;
+        background-color: $primary
+        }
+    }
+
+    .rdatez-daysofweek {
+        color: $primary;
+        font-family: 'SF Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+        span{
+            font-size: 12px;
+        }
+    }
+    
+    input{
+        padding: 8px 5px 8px 5px;
+        color: $primary;
+        font-family: 'SF Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+        &::placeholder{
+            color:$primary !important;
+            opacity: 1
+        }
+    }
+    .rdatez-picker {
+        padding: 0;
+        padding-bottom: 10px;
+        border: 1px solid $primary;
+        &:after {
+            border-bottom: 12px solid $primary
+        }
+    }
+    header.rdatez-calendar-title {
+        color: white;
+        background-color: $primary;
+    }
+    
+
+    button.rdatez-btn {
+        background-color: $primary !important;
+        border: none;
+        top: 3px;
+        svg{
+            fill:white
+        }
+    }
+    .cal-icon {
+        fill: $primary;
+    }
+    font-family: 'SF Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;  
+    .rdatez-day-spacer,
+    .rdatez-calendar-year,
+    .rdatez-calendar-month{
+        border: none;
+    }
+    .starts-on-0{
+        .rdatez-day{
+            &:nth-child(-n+2){
+                border:none;
+            }
+        }
+    }
+    .starts-on-1{
+        .rdatez-day{
+            &:nth-child(-n+8){
+                border:none;
+            }
+        }
+    }
+    .starts-on-2{
+        .rdatez-day{
+            &:nth-child(-n+7){
+                border:none;
+            }
+        }
+    }
+    .starts-on-3{
+        .rdatez-day{
+            &:nth-child(-n+6){
+                border:none;
+            }
+        }
+    }
+    .starts-on-4{
+        .rdatez-day{
+            &:nth-child(-n+5){
+                border:none;
+            }
+        }
+    }
+    .starts-on-5{
+        .rdatez-day{
+            &:nth-child(-n+4){
+                border:none;
+            }
+        }
+    }
+    .starts-on-6{
+        .rdatez-day{
+            &:nth-child(-n+3){
+                border:none;
+            }
+        }
+    }
+
+    .rdatez-day.past-day.selected-day,
+    a.selected-day {
+        background: $primary;
+    }
+
+    section.rdatez-month-days.starts-on-5 {
+        padding: 0px 3px;
+    }
+}
+
+
+//Color Palletes
+
+//Sky Blue
+.skyblue-1{
+    background-color: rgba($color: $primary, $alpha: 1)
+}
+
+.skyblue-2{
+    background-color: rgba($color: $primary, $alpha: 0.85)
+}
+
+.skyblue-3{
+    background-color: rgba($color: $primary, $alpha: 0.7)
+}
+
+.skyblue-4{
+    background-color: rgba($color: $primary, $alpha: 0.45)
+}
+
+.skyblue-5{
+    background-color: rgba($color: $primary, $alpha: 0.25)
+}
+
+.skyblue-6{
+    background-color: rgba($color: $primary, $alpha: 0.1)
+}
+
+//Cadet Blue
+$cadetBlue: #385E9D;
+
+.cadetBlue-1{
+    background-color: rgba($color: $cadetBlue, $alpha: 1)
+}
+
+.cadetBlue-2{
+    background-color: rgba($color: $cadetBlue, $alpha: 0.85)
+}
+
+.cadetBlue-3{
+    background-color: rgba($color: $cadetBlue, $alpha: 0.7)
+}
+
+.cadetBlue-4{
+    background-color: rgba($color: $cadetBlue, $alpha: 0.45)
+}
+
+.cadetBlue-5{
+    background-color: rgba($color: $cadetBlue, $alpha: 0.25)
+}
+
+.cadetBlue-6{
+    background-color: rgba($color: $cadetBlue, $alpha: 0.1)
+}
+
+//Shore Green
+$shoreGreen: #B9DCD2;
+
+.shoreGreen-1{
+    background-color: rgba($color: $shoreGreen, $alpha: 1)
+}
+
+.shoreGreen-2{
+    background-color: rgba($color: $shoreGreen, $alpha: 0.85)
+}
+
+.shoreGreen-3{
+    background-color: rgba($color: $shoreGreen, $alpha: 0.7)
+}
+
+.shoreGreen-4{
+    background-color: rgba($color: $shoreGreen, $alpha: 0.45)
+}
+
+.shoreGreen-5{
+    background-color: rgba($color: $shoreGreen, $alpha: 0.25)
+}
+
+.shoreGreen-6{
+    background-color: rgba($color: $shoreGreen, $alpha: 0.1)
+}
+
+//Dusky Liac
+$duskyLiac: #8986CA;
+
+.duskyLiac-1{
+    background-color: rgba($color: $duskyLiac, $alpha: 1)
+}
+
+.duskyLiac-2{
+    background-color: rgba($color: $duskyLiac, $alpha: 0.85)
+}
+
+.duskyLiac-3{
+    background-color: rgba($color: $duskyLiac, $alpha: 0.7)
+}
+
+.duskyLiac-4{
+    background-color: rgba($color: $duskyLiac, $alpha: 0.45)
+}
+
+.duskyLiac-5{
+    background-color: rgba($color: $duskyLiac, $alpha: 0.25)
+}
+
+.duskyLiac-6{
+    background-color: rgba($color: $duskyLiac, $alpha: 0.1)
+}
+
+
+//Dark Purple
+$darkPurple: #3F2A56;
+
+.darkPurple-1{
+    background-color: rgba($color: $darkPurple, $alpha: 1)
+}
+
+.darkPurple-2{
+    background-color: rgba($color: $darkPurple, $alpha: 0.85)
+}
+
+.darkPurple-3{
+    background-color: rgba($color: $darkPurple, $alpha: 0.7)
+}
+
+.darkPurple-4{
+    background-color: rgba($color: $darkPurple, $alpha: 0.45)
+}
+
+.darkPurple-5{
+    background-color: rgba($color: $darkPurple, $alpha: 0.25)
+}
+
+.darkPurple-6{
+    background-color: rgba($color: $darkPurple, $alpha: 0.1)
+}
+
+//Flash Pink
+$flashPink: #F2D4D7;
+
+.flashPink-1{
+    background-color: rgba($color: $flashPink, $alpha: 1)
+}
+
+.flashPink-2{
+    background-color: rgba($color: $flashPink, $alpha: 0.85)
+}
+
+.flashPink-3{
+    background-color: rgba($color: $flashPink, $alpha: 0.7)
+}
+
+.flashPink-4{
+    background-color: rgba($color: $flashPink, $alpha: 0.45)
+}
+
+.flashPink-5{
+    background-color: rgba($color: $flashPink, $alpha: 0.25)
+}
+
+.flashPink-6{
+    background-color: rgba($color: $flashPink, $alpha: 0.1)
+}
+
+//Neutral Black
+$neutralBlack: #262626;
+
+.neutralBlack-1{
+    background-color: rgba($color: $neutralBlack, $alpha: 1)
+}
+
+.neutralBlack-2{
+    background-color: rgba($color: $neutralBlack, $alpha: 0.85)
+}
+
+.neutralBlack-3{
+    background-color: rgba($color: $neutralBlack, $alpha: 0.7)
+}
+
+.neutralBlack-4{
+    background-color: rgba($color: $neutralBlack, $alpha: 0.55)
+}
+
+.neutralBlack-5{
+    background-color: rgba($color: $neutralBlack, $alpha: 0.45)
+}
+
+.neutralBlack-6{
+    background-color: rgba($color: $neutralBlack, $alpha: 0.3)
+}
+
+//Green
+$green: #2AAC3C;
+
+.green-1{
+    background-color: rgba($color: $green, $alpha: 1)
+}
+
+.green-2{
+    background-color: rgba($color: $green, $alpha: 0.85)
+}
+
+.green-3{
+    background-color: rgba($color: $green, $alpha: 0.7)
+}
+
+.green-4{
+    background-color: rgba($color: $green, $alpha: 0.55)
+}
+
+.green-5{
+    background-color: rgba($color: $green, $alpha: 0.45)
+}
+
+.green-6{
+    background-color: rgba($color: $green, $alpha: 0.3)
+}
+
+//Red
+$red: #DE3333;
+
+.red-1{
+    background-color: rgba($color: $red, $alpha: 1)
+}
+
+.red-2{
+    background-color: rgba($color: $red, $alpha: 0.85)
+}
+
+.red-3{
+    background-color: rgba($color: $red, $alpha: 0.7)
+}
+
+.red-4{
+    background-color: rgba($color: $red, $alpha: 0.55)
+}
+
+.red-5{
+    background-color: rgba($color: $red, $alpha: 0.45)
+}
+
+.red-6{
+    background-color: rgba($color: $red, $alpha: 0.3)
+}
+
+//Yellow
+
+$yellow : #F2B82F;
+.yellow-1{
+    background-color: rgba($color: $yellow, $alpha: 1)
+}
+
+.yellow-2{
+    background-color: rgba($color: $yellow, $alpha: 0.85)
+}
+
+.yellow-3{
+    background-color: rgba($color: $yellow, $alpha: 0.7)
+}
+
+.yellow-4{
+    background-color: rgba($color: $yellow, $alpha: 0.55)
+}
+
+.yellow-5{
+    background-color: rgba($color: $yellow, $alpha: 0.45)
+}
+
+.yellow-6{
+    background-color: rgba($color: $yellow, $alpha: 0.3)
+}
+
+//List
+li{
+    color: $primary;
+}
+
+li > p {
+    color: $neutralBlack;
+}
+
+
+//Table
+.table{
+    border: 1px solid $primary;
+    font-family: 'SF Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    thead{
+        background-color: $primary;
+        font-weight: 900;
+        tr{
+            th{
+                border:none;
+                height:70px;
+                vertical-align: inherit;
+                color: white;
+            }
+        }
+    }
+    tbody{
+        tr{
+            &:nth-child(odd){
+                background-color: rgba($color: $primary, $alpha: 0.1);
+                }
+            }
+            th{
+                border: none;
+                height:50px;
+                vertical-align: inherit;
+            }
+            td{
+                border: none;
+                height:50px;
+                vertical-align: inherit;
+            }
+        }
+
+}
+
+
+//Checkboxes and Radio
+
+
+.is-checkradio[type=checkbox]:checked+label::before, .is-checkradio[type=checkbox]:checked+label:before, .is-checkradio[type=radio]:checked+label::before, .is-checkradio[type=radio]:checked+label:before {
+    border: 0.05rem solid $primary;
+    border-radius: 2px;
+}
+
+.is-checkradio[type=radio]+label::after, .is-checkradio[type=radio]+label:after {
+    background: $primary;
+}
+
+.is-checkradio[type=checkbox]:hover:not([disabled])+label::before, .is-checkradio[type=checkbox]:hover:not([disabled])+label:before, .is-checkradio[type=radio]:hover:not([disabled])+label::before, .is-checkradio[type=radio]:hover:not([disabled])+label:before {
+    border-color: skyblue !important;
+}
+
+
+
+.is-checkradio[type=checkbox]+label::before, .is-checkradio[type=checkbox]+label:before, .is-checkradio[type=radio]+label::before, .is-checkradio[type=radio]+label:before {
+    border: 0.05rem solid $primary;
+    border-radius: 2px;
+}
+
+.is-checkradio[type=checkbox]+label::after, .is-checkradio[type=checkbox]+label:after {
+    border-color: $primary;
+}
+
+
+.is-checkradio[type=checkbox]:checked + label::before, .is-checkradio[type=checkbox]:checked + label:before {
+    border: 0.05rem solid #62B5E5;
+    border-radius: 2px;
+    background: $primary;
+}
+.is-checkradio[type=checkbox] + label::after, .is-checkradio[type=checkbox] + label:after {
+    border-color: white;
+}
+
+//Switch
+
+.switch[type=checkbox]+label::before, .switch[type=checkbox]+label:before {
+    border: .1rem solid $primary;
+    background: white;
+}
+
+
+.switch[type=checkbox]:checked+label::before, .switch[type=checkbox]:checked+label:before {
+    background: $primary;
+}
+
+
+.switch[type=checkbox].is-rounded + label::after, .switch[type=checkbox].is-rounded + label:after {
+    background: white;
+    border: 2px solid $primary;
+}
+
+
+.pagination{
+    p{
+        padding-left: 10px;
+    }
+    .pagination-list{
+        background: white;
+        border: 1px solid $primary;
+        margin: 0;
+        flex-grow: 0;
+        li{
+            color: transparent;
+            .pagination-link{
+                border-color: transparent;
+                color: $primary;
+                font-weight: 900;
+            }
+            .is-current{
+                color: white;
+                background-color: $primary;
+            }
+            &:nth-child(1){
+                border: 1px solid $primary;
+                border-width: 0px 1px 0px 0px;
+             }
+
+            &:nth-last-child(1),
+            {
+                border: 1px solid $primary;
+                border-width: 0px 0px 0px 1px;
+            }
+        }
+    }
+
+} 
+
+.content li + li {
+    margin-top: 0em;
+}
+
+.box{
+    border-radius: 0;
+}
+
+//Mobile 
+
+@media screen and (max-width: 768px){
+
+    .table thead tr .tdTablet{
+        text-align: center
+    }
+
+    .pagination{
+        .pagination-list{
+            font-size: 11px;
+            li{
+                color: transparent;
+                .pagination-link{
+                    border-color: transparent;
+                    color: $primary;
+                    font-weight: 900;
+                }
+                .is-current{
+                    color: white;
+                    background-color: $primary;
+                }
+                &:nth-child(1){
+                    border-width: 0px 0px 0px 0px;
+                 }
+    
+                &:nth-last-child(1),
+                {
+                    border-width: 0px 0px 0px 0px;
+                }
+            }
+        }
+    
+    } 
+
+    .rdatez-calendar {
+        margin-top: 80px;
+        border: 1px solid $primary;
+    }
+
+    .rdatez-picker {
+        border: none
+    }
+
+    header.rdatez-header {
+        display: none;
+    }
+}
+
+.navbar.is-fixed-bottom {
+    z-index: 100;
+}
+
+
+@media (min-width: 769px){
+    .rdatez-picker {
+        min-width: 300px;
+    }
+}
+
+
+@media (min-width: 769px){
+    .rdatez-picker {
+        min-width: 300px;
+    }
+}
